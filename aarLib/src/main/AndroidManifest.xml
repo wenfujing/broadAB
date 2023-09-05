@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lee.aarlib">
 
-    <uses-permission android:name="com.lee.aarlib.BroadMsgReceiver"/>
+    <uses-permission android:name="BroadCastB"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <permission android:name="com.lee.aarlib.BroadMsgReceiver" android:protectionLevel="signature"/>
+    <permission android:name="BroadCastB" android:protectionLevel="signature"/>
 
     <application>
 
@@ -15,7 +15,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.lee.aarlib.BroadMsgReceiver"/>
+                <action android:name="BroadCastB"/>
             </intent-filter>
         </receiver>
 

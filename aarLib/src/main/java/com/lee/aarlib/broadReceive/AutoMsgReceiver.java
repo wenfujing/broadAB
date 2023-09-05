@@ -12,10 +12,11 @@ import android.util.Log;
 public class AutoMsgReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        if(intent != null){
-            Log.e("Test","-----------------------收到广播了");
-            Log.e("Test","广播名字="+intent.getAction());//信息：intent.getStringExtra("字段")
-            Log.e("test","---------"+intent.getStringExtra("chifan"));
+        if(intent.getAction()=="BroadCastB"){
+            Log.e("我是A应用","-----------------------收到来自B的广播了");
+            Log.e("我是A应用","|广播名字="+intent.getAction());//信息：intent.getStringExtra("字段")
+            Log.e("我是A应用","|广播数据="+intent.getStringExtra("chifan"));
+            Log.e("我是A应用","______________________________________________");
         }
     }
 }

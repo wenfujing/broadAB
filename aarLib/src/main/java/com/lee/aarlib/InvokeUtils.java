@@ -8,18 +8,19 @@ import com.lee.aarlib.broadReceive.BroadService;
 
 /**
  * 给主模块调用接口
+ * todo 可以写成单例
 * */
 public class InvokeUtils {
     private Context mContext;
 
     //初始化接口
     public void init(Context context){
-        mContext = context;
-        //启动广播服务
+        mContext = context.getApplicationContext();
+        //启动广播service
         Intent intent = new Intent(mContext, BroadService.class);
         context.startService(intent);
 
-        //发送初始化广播
+        //调用service去发送广播
         intent.putExtra("command","init");
         intent.putExtra("data","我初始化好了");
         mContext.startService(intent);
@@ -27,6 +28,7 @@ public class InvokeUtils {
 
     //功能接口1
     public void interferce1(){
+        //调用service去发送广播
         Intent intent = new Intent(mContext, BroadService.class);
         intent.putExtra("command","interferce1");
         intent.putExtra("data","123456");

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lee.appb">
 
-    <uses-permission android:name="com.lee.aarlib.BroadMsgReceiver" />
+    <uses-permission android:name="BroadCastB" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
@@ -28,7 +28,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter android:priority="100">
-                <action android:name="com.lee.aarlib.BroadMsgReceiver" />
+                <action android:name="BroadCastA" />
             </intent-filter>
         </receiver>
 

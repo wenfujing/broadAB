@@ -8,15 +8,18 @@ import android.view.View;
 import com.lee.aarlib.InvokeUtils;
 
 public class MainActivity extends AppCompatActivity {
+    InvokeUtils invokeUtils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        invokeUtils = new InvokeUtils();
+
         findViewById(R.id.btClick).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InvokeUtils invokeUtils = new InvokeUtils();
                 invokeUtils.init(MainActivity.this);
             }
         });
@@ -24,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btClick2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InvokeUtils invokeUtils = new InvokeUtils();
                 invokeUtils.interferce1();
             }
         });
